@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <th>投稿日時</th>
-        <td><%= @task.created_at %></td>
+        <td><%= @task.created_at.to_s(:datetime_jp) %></td>
     </tr>
     <tr>
         <th>終日</th>

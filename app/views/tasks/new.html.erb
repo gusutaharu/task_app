@@ -1,8 +1,13 @@
 <h2>スケジュール新規作成</h2>
 
-<% if flash.notice %>
-    <p class="notice"><%= flash.notice %></p>
+<% flash.each do |key, value| %>
+    <p class="alert alert-<%= key %>">
+      <%= value %>
+    </p>
 <% end %>
+
+
+<%= render "shared/error", obj: @task %>
 
 <%= form_for @task do |f| %>
     <table>
@@ -20,7 +25,8 @@
         </tr>
          <tr>
             <th><%= f.label :all_day ,"終日" %></th>
-            <td><%= f.check_box :all_day %></td>
+            <td><%= f.check_box :all_day %>
+            終日の場合はチェックを入れます</td>
         </tr>
         <tr>
             <th><%= f.label :memo ,"スケジュールメモ" %></th>

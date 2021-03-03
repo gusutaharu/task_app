@@ -13,8 +13,8 @@ class TasksController < ApplicationController
       flash[:success] = "スケジュールを登録しました"
       redirect_to :tasks
     else
+      flash[:failure] = "スケジュールを登録できませんでした"
       render "new"
-      flash[:notice] = "スケジュールを登録できませんでした"
     end
   end
 
