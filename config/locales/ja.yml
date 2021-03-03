@@ -9,5 +9,3 @@ ja:
         end_date: 終了日
         all_day: 終日
         memo: スケジュールメモ
-  date:
-    start_date: "%Y年%m月%d日"
