@@ -1,6 +1,8 @@
-body{
+.fixed{
     min-height: 100vh;
     position: relative;
+    box-sizing: border-box;
+    padding-bottom: 100px;
 }
 
 ul{
